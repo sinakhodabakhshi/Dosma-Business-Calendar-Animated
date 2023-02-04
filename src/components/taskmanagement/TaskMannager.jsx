@@ -23,31 +23,13 @@ export default function TaskMannager({ tasks }) {
 
   return (
     <>
-      <motion.div
-        initial={{
-          y: -10,
-          opacity: 0,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        exit={{
-          opacity: 0,
-        }}
-        transition={{
-          duration: 0.2,
-          opacity: {
-            duration: 0.1,
-          },
-        }}
-        key="warinin"
+      <div
         onClick={handleClick}
         className="bg-slate-100 dark:bg-[#212121] border-x border-x-[#80cbc4] dark:border-x-[#3D3D3D] border-b  border-b-[#80cbc4] dark:border-b-[#3D3D3D] rounded-b-lg
          flex flex-row-reverse gap-x-2 gap-y-3 flex-wrap shrink justify-start pt-6 pb-5 px-2 mb-[18px]"
       >
         <TaskBtnsList tasks={tasks} active={active} />
-      </motion.div>
+      </div>
 
       {tasks && tasks[active] && (
         <motion.div
